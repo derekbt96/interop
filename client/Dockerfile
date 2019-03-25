@@ -41,6 +41,7 @@ COPY client/ .
 RUN bash -c "cd /interop/client && \
         source venv2/bin/activate && \
         python setup.py install && \
+	python printData.py install && \
         deactivate" && \
     bash -c "cd /interop/client && \
         source venv3/bin/activate && \
